@@ -26,7 +26,23 @@ root.innerHTML = `
             <p>${movieDetails.Plot}</p>
           </div>
         </div>
-      </article>
+        </article>
+        <article class="notification is-primary">
+            <p class="title">${movieDetails.BoxOffice}</p>
+            <p class="subtitle">BoxOffice</p>
+        </article>
+        <article class="notification is-primary">
+            <p class="title">${movieDetails.Metascore}</p>
+            <p class="subtitle">Metascore</p>
+        </article>
+        <article class="notification is-primary">
+            <p class="title">${movieDetails.imdbRating}</p>
+            <p class="subtitle">imdbRating</p>
+        </article>
+        <article class="notification is-primary">
+            <p class="title">${movieDetails.imdbVotes}</p>
+            <p class="subtitle">imdbVotes</p>
+        </article>
       `;
     }
     const onMovieSelect = async movie =>{
@@ -82,29 +98,3 @@ input.addEventListener("input",debounce(onTime));
 document.addEventListener("click", event =>{
     if(!root.contains(event.target))  dropdown.classList.remove("is-active");
 })
-    /*const row = document.createElement('div');
-    const col = document.createElement('div');
-    const moviePoster = document.createElement('img');
-    const movieName = document.createElement('h1');
-    const movieGenre = document.createElement('h4');
-    const moviePlot = document.createElement('p');
-
-    moviePoster.src = movieDetails.Poster;
-    movieName.innerText = movieDetails.Title;
-    movieGenre.innerText = movieDetails.Genre;
-    moviePlot.innerText = movieDetails.Plot; 
-    
-    row.classList.add('col-span');
-    col.classList.add('row-span');
-    artical.classList.add('row-span');
-    
-    col.appendChild(movieName);
-    col.appendChild(movieGenre);
-
-    row.appendChild(moviePoster);
-    row.appendChild(col);
-
-    artical.appendChild(row);
-    artical.appendChild(moviePlot);
-
-    return artical;*/
